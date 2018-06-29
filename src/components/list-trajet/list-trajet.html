@@ -1,0 +1,36 @@
+<!-- Generated template for the ListTrajetComponent component -->
+<ion-list *ngIf="trajets">
+  <!-- Card template -->
+  <ion-card *ngFor="let trajet of trajets">
+    <ion-row>
+      <ion-col center text-center>
+        <h2>Depart: {{ trajet.getDepart() }}</h2>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+        <ion-col center text-center>
+          <h2>Arriver: {{ trajet.getArriver() }}</h2>
+        </ion-col>
+    </ion-row>
+
+    <ion-row>
+        <ion-col center text-center>
+          <h2>Conducteur: Conducteur: {{ trajet.getConducteur().getLogin() }}</h2>
+        </ion-col>
+    </ion-row>
+
+    <ion-row>
+        <ion-col center text-center>
+          <h2>Nombre de place Disponible: {{ trajet.getNombreDePlace() }}</h2>
+        </ion-col>
+    </ion-row>
+
+    <ion-row>
+        <button (click)="reserver(trajet)" ion-button icon-start clear small>
+            <ion-icon ios="ios-car" md="md-car"></ion-icon>
+            <div>Reserver</div>
+        </button>
+    </ion-row>
+  </ion-card>
+</ion-list>

@@ -1,0 +1,32 @@
+<!-- Generated template for the ProfilComponent component -->
+<ion-list ng-if="currentUser">
+  <ion-item>
+    <ion-row>
+      <ion-col center text-center>
+        <h2>{{currentUser.getLogin()}}</h2>
+      </ion-col>
+    </ion-row>
+  </ion-item>
+  <ion-item>
+    <ion-row>
+      <ion-col center text-center>
+        <h2>{{currentUser.getInfo()}}</h2>
+      </ion-col>  
+    </ion-row>
+  </ion-item>
+  <ion-list ng-if="trajets">
+    <ion-card *ngFor="let trajet of trajets">
+      <ion-row>
+        <ion-col center text-center>
+          <h2>Depart: {{ trajet.getDepart() }}</h2>
+        </ion-col>
+      </ion-row>
+  
+      <ion-row>
+          <ion-col center text-center>
+            <h2>Arriver: {{ trajet.getArriver() }}</h2>
+          </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-list>
+</ion-list>

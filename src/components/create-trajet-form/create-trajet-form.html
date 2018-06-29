@@ -1,0 +1,25 @@
+<!-- Generated template for the CreateTrajetFormComponent component -->
+
+<ion-content class="ioncontent" padding>
+	<form [formGroup]="createTrajetForm" (ngSubmit)="createTrajet()">
+	  <ion-item>
+		<ion-label color="primary" stacked>Depart</ion-label>
+		<ion-input type="text" formControlName="depart"> </ion-input>
+	</ion-item>
+	
+	<ion-item>
+		<ion-label color="primary" stacked>Arriver</ion-label>
+		<ion-input type="text" formControlName="arriver"> </ion-input>
+	</ion-item>
+
+	<ion-item>
+		<ion-label color="primary" stacked>Nombre de place</ion-label>
+		<ion-input type="text" formControlName="nbPlace"> </ion-input>
+	</ion-item>
+
+	  <hr class="hr-separate">
+	  <button ion-button block type="submit">Envoyer</button>
+	</form>
+  </ion-content>
+
+

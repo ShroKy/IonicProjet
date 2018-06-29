@@ -1,0 +1,15 @@
+<!-- Generated template for the LoginComponent component -->
+<ion-content class="ioncontent" padding>
+  <form [formGroup]="loginForm" (ngSubmit)="logForm()">
+    <ion-item>
+      <ion-label color="light" floating>Username</ion-label>
+      <ion-input type="text" formControlName="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="light" floating>Mot de passe</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+    <hr class="hr-separate">
+    <button ion-button block type="submit">Se Connecter</button>
+  </form>
+</ion-content>
